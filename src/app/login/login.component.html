@@ -1,0 +1,53 @@
+<section class="vh-100">
+    <div class="container py-5 h-100">
+      <div class="row d-flex align-items-center justify-content-center h-100">
+        <div class="col-md-8 col-lg-7 col-xl-6">
+          <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
+            class="img-fluid" alt="Phone image">
+        </div>
+        <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+          <form
+          [formGroup]="loginForm" (ngSubmit)="onSubmit()"
+          >
+            
+            <h1>Login</h1>
+            <div class="form-outline mt-3 mb-4">
+              <label class="form-label" for="username">Email address</label>
+              <input type="text" placeholder="Email" id="email" formControlName="email" class="form-control form-control-lg" > 
+              <div *ngIf="submitted && loginForm.controls.email.errors" class="errors">
+                 <div *ngIf="submitted && loginForm.controls.email.errors.required">
+              Email is required
+             </div>
+          <div *ngIf="submitted && loginForm.controls.email.errors.email">
+           Enter a Valid Email ID
+          </div>
+          </div>
+          </div>
+  
+            <div class="form-outline mb-4">
+              <label class="form-label" for="password">Password</label>
+              <input type="password" placeholder="Password" id="password" formControlName = "password"  class="form-control form-control-lg" >
+              <div *ngIf="submitted && loginForm.controls.password.errors" class="errors">
+      <div *ngIf="submitted && loginForm.controls.password.errors.required">
+          Password is required
+      </div>
+      <div *ngIf="submitted && loginForm.controls.password.errors.minlength">
+        Password must be at least 8 digits.
+    </div>
+  </div>
+            </div>
+  
+            <div class="d-flex justify-content-around align-items-center mb-4">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" checked >
+                <label class="form-check-label" for="form1Example3"> Remember me </label>
+              </div>
+              <a role="button">Forgot password?</a>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg sign">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>

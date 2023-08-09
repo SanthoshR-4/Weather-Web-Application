@@ -1,0 +1,64 @@
+<div class="cont">
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-4 col-sm-12 col-xs-12"> 
+               <div class="card p-4">    
+                
+                   <div class="d-flex">
+                       <h6 class="flex-grow-1 fw-bold">Chennai</h6>
+                       
+                   </div>
+                    
+                   <div class="d-flex flex-column temp mt-5 mb-3">
+                       <h1 class="mb-0 font-weight-bold" id="heading"> {{temperature}} &deg; </h1>
+                       <span class= "grey fname fw-bold">{{summary}}</span>
+                   </div>
+                   
+                   <div class="d-flex">
+                       <div class="temp-details flex-grow-1">
+                            
+                            <p class="my-1 fname"> 
+                               <i class="fa fa-tint mr-2" aria-hidden="true"></i>
+                               Humidity
+                               <span class="humid"> {{humidity}}% </span> 
+                            </p>
+
+
+                            <p class="my-1 fname"> 
+                                <i class="fa-solid fa-wind"></i>
+                                wind:
+                                <span class="humid"> {{wind}} </span> 
+                             </p>
+
+                             <p class="my-1 fname">
+                                pressure
+                               <span class="humid"> {{pressure}} hpa</span>
+                            </p>
+
+                            <p class="my-1 fname"> 
+                                Feels like:
+                                <span class="humid"> {{feelsliketemp}}&deg; </span> 
+                             </p>
+
+                            <p class="my-1 fname"> 
+                                Max-temp:
+                                <span class="humid"> {{maxtemp}}&deg; </span> 
+                             </p>
+
+                       </div>
+                       
+                       <div>
+                           <img src="{{iconUrl}}" width="200px">
+                       </div>
+                       
+                       
+                   </div>
+                    
+      
+                </div>
+        </div>
+    </div>
+
+
+</div>
+</div>

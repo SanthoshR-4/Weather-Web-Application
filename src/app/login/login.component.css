@@ -1,0 +1,14 @@
+
+.sign{
+    width:525px
+}
+.ng-invalid.ng-touched{
+    border-color: red;
+}
+.ng-touched small{
+    color: red;
+}
+
+.errors {
+    color: red;
+}
